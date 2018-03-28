@@ -380,7 +380,7 @@ def firmware_update(connect, filename, url, version, skip_check, erase):
         fp = 32768 * b'\xFF'
     else:
         import requests
-        r = requests.get('https://wallet.trezor.io/data/firmware/releases.json')
+        r = requests.get('https://wallet.trezor.io/data/firmware/1/releases.json')
         releases = r.json()
 
         def version_func(r):
